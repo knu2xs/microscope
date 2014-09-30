@@ -1,5 +1,8 @@
 <template name="postItem">
 	<div class="post">
-		<h3><a href="{{url}}">{{title}}</a> <small>{{domain}}</small></h3>
+        <div class="post-content">
+            <h3><a href="{{url}}">{{title}}</a> <small>{{domain}}</small></h3>
+        </div>
+		<a href="{{pathFor 'postPage'}}" class="discuss btn">Discuss</a>
 	</div>
 </template>
