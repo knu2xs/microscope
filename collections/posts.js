@@ -29,7 +29,7 @@ Meteor.methods({
 
         // duplicate url
         if (postAttributes.url && postWithSameLink){
-            throw new Meteor.Error(302, 'This link has already been submitted.', postWithSameLink._id);
+            throw new Meteor.Error(303, 'This link has already been submitted.', postWithSameLink._id);
         }
 
         // PROCESS SUBMISSION
