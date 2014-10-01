@@ -11,9 +11,11 @@
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
                     <li>
+                        {{#if currentUser}}
                         <a href="{{pathFor 'postSubmit'}}">
-                            <span class="glyphicon glyphicon-plus"></span> New
+                            <span class="glyphicon glyphicon-plus"></span> Submit Post
                         </a>
+                        {{/if}}
                     </li>
                     <li>{{> loginButtons}}</li>
                 </ul>
