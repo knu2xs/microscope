@@ -9,8 +9,5 @@ Template.postItem.helpers({
     },
     submitTime: function() {
       return moment(this.submitted).fromNow();
-    },
-    commentsCount: function(){
-      return Comments.find({postId: this._id}).count();
     }
 });

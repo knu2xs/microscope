@@ -6,4 +6,10 @@
         {{> comment}}
       {{/each}}
     </ul>
+
+    {{#if currentUser}}
+      {{> commentSubmit}}
+    {{else}}
+      <p>Please log in to submit comments.</p>
+    {{/if}}
 </template>

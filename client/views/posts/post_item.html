@@ -5,9 +5,9 @@
             <p>
                 submitted by {{author}} {{submitTime}}
 								{{#if commentsCount}}
-									with <a href="{{pathFor 'postsPage'}}">{{commentsCount}} comments</a>.
+									with <a href="{{pathFor 'postPage'}}">{{commentsCount}} comment(s)</a>.
 								{{else}}
-									with no comments yet. <a href="{{pathFor 'postsPage'}}">Be the first to comment!</a>
+									with no comments...yet. <a href="{{pathFor 'postPage'}}">Be the first to comment!</a>
 								{{/if}}
                 {{#if ownPost}}
                     <a href="{{pathFor 'postEdit'}}">Edit</a>
