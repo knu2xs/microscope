@@ -28,7 +28,13 @@ Meteor.methods({
     // increment the comments count by one
     Posts.update(comment.postId, {$inc: {commentsCount: 1}});
 
-    // pass the commetn back to be added
-    return Comments.insert(comment);
+    // create the comment and save the id
+    comment._id = Comments.insert(comment);
+
+    // create the notification to let the user know a comment has been added
+    createCommentNotification(comment);
+
+    // return the comment id
+    return comment._id;
   }
 });
